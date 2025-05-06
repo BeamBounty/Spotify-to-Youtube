@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server to call spotify api and fetch related song data",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Matthew C (BeamBounty)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
