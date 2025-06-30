@@ -4,11 +4,20 @@
   "description": "server to call spotify api and fetch related song data",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "start": "npx ts-node app.ts"
   },
   "author": "Matthew C (BeamBounty)",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "axios": "^1.10.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "qs": "^6.14.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
