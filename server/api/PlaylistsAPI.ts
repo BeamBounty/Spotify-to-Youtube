@@ -3,9 +3,8 @@ const { parseSpotifyUrl } = require('../components/Playlists');
 
 const router: Router = express.Router();
 
-router.get('/getSpotPlaylist', async (req: any, res: any) => {
+router.post('/getSpotPlaylist', async (req: any, res: any) => {
     const spotUrl = req.body.url as string;
-    
     if (!spotUrl) {
         return res.status(400).json({ type: 'Error', message: 'Missing Spotify URL' });
     }

@@ -1,7 +1,13 @@
 import express from 'express';
 import playlistRouter from './api/PlaylistsAPI';
+import cors from 'cors';
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost:3000', // frontend port
+  methods: ['GET', 'POST'],
+}));
 
 app.set('port', process.env.PORT || 4000);
 
