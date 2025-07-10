@@ -36,16 +36,20 @@ const PlaylistBar = () => {
                 </button>
             </div>
             {songs.length > 0 && (<div
-                className="absolute top-20 p-4 bg-slate-800 text-white w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col gap-4 overflow-y-auto"
+                className="absolute top-20 p-4 bg-inherit text-white w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col gap-4 overflow-y-auto"
                 style={{ maxHeight: '600px' }}>
                 {songs.filter(s => s.track).map((s, index) => (
                     <iframe
-                    key={index}
-                    src={`https://open.spotify.com/embed/track/${s.track.id}`}
-                    width="300"
-                    height="80"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
+                        frameBorder="0"
+                        key={index}
+                        src={`https://open.spotify.com/embed/track/${s.track.id}`}
+                        width="100%"
+                        height="80"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        style={{
+                            borderRadius: "12px",
+                        }}
                     />
                 ))}
             </div>)}
